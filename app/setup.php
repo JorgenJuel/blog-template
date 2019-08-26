@@ -164,3 +164,17 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
 
     return $paths;
 } );
+
+/**
+ * Soberwp Models
+ */
+add_filter('sober/models/path', function () {
+    return get_theme_file_path() . '/app/models';
+});
+
+/**
+ * Soberwp Controller
+ */
+add_filter('sober/controller/path', function () {
+    return get_theme_file_path() . '/app/controllers';
+});

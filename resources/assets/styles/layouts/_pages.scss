@@ -1,0 +1,11 @@
+[role="document"] {
+  padding: 0 20px;
+
+  @media (min-width: $desktop) {
+    margin-left: 30vw;
+  }
+
+  @media (min-width: 1167px) {
+    margin-left: 400px; // 30% of 1167 is > 350px
+  }
+}

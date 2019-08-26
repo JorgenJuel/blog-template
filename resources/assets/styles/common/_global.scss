@@ -1,0 +1,25 @@
+body {
+  margin: 40px 0;
+  font-size: 18px;
+  line-height: 1.3;
+  font-family: arial, sans-serif;
+  padding: 0;
+}
+
+.content {
+  width: 750px;
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+a {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}

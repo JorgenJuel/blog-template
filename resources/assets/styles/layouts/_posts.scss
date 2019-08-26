@@ -1,0 +1,38 @@
+.entry-title,
+.entry-meta {
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+}
+
+.entry-meta {
+  color: #8b8484;
+  margin: -10px 0 10px;
+}
+
+.entry-content,
+.entry-meta {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.post {
+  &.in-archive {
+    margin-bottom: 40px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 60px;
+    }
+  }
+}

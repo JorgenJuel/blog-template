@@ -1,0 +1,152 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+
+.banner {
+  @media (min-width: $desktop) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30vw;
+    max-width: 350px;
+    padding-left: 40px;
+    padding-top: 40px;
+    box-sizing: border-box;
+
+    .brand {
+      display: block;
+      max-width: 60%;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .container {
+    @media (max-width: $mobiledown) {
+      display: flex;
+      padding: 0 20px;
+      justify-content: space-between;
+
+      .brand {
+        max-width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobiledown) {
+  .nav-primary {
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+    left: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+
+    .open-nav & {
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.mobile-menu-closer,
+.mobile-menu-opener {
+  cursor: pointer;
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.mobile-menu-opener {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $red;
+  }
+}
+
+.mobile-menu-closer {
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 15px;
+    left: 5px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav {
+  list-style: none;
+  margin: 40px 0;
+  padding: 0;
+
+  &--small {
+    margin-top: -20px;
+  }
+
+  &__item {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: inherit;
+    text-decoration: none;
+
+    .nav--small & {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}

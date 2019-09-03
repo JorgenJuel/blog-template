@@ -10,7 +10,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', {{ get_field('ga', 'options') }});
+  gtag('config', '{{ get_field('ga', 'options') }}');
 </script>
 
   @endif
